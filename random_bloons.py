@@ -7,40 +7,6 @@ primary_gamemode = ["dart_monkey", "boomerang_monkey", "bomb_shooter", "tack_sho
 military_gamemode = ["sniper_monkey", "monkey_sub", "monkey_buccaneer", "monkey_ace", "heli_pilot", "mortar_monkey", "dartling_gunner"]
 magic_gamemode = ["wizard_monkey", "super_monkey","ninja_monkey", "alchemist", "druid"]
 
-
-def mainMenu():
-    print("*** MENU ***")
-    print("")
-    print("e1- Primary gamemode randomizer")
-    print("e2- Military gamemode randomizer")
-    print("e3- Magic gamemode randomizer")
-    print("e4- Normal randomizer")
-    print("e5- Exit")
-    print("")
-
-    while True:
-
-        selection = input("Enter a choice: ")
-
-        if(selection == "e1"):
-            primary_mode()
-            break
-        elif(selection == "e2"):
-            military_mode()
-            break
-        elif(selection == "e3"):
-            magic_mode()
-            break
-        elif(selection == "e4"):
-            monkeys_3()
-            break
-        elif(selection == "e5"):
-            print("Goodbye!")
-            break
-        else:
-            print("Invalid choice. Enter 'e1'-'e5'")
-            print("")
-
     
 def primary_mode():
     randomized_prim_mode = random.choices(primary_gamemode, k=3)
@@ -133,5 +99,39 @@ def monkeys_3():
             break
         else:
             print("You typed something wrong, try again!")
+
+def mainMenu():
+    print("*** MENU ***")
+    print("")
+    print("e1- Primary gamemode randomizer")
+    print("e2- Military gamemode randomizer")
+    print("e3- Magic gamemode randomizer")
+    print("e4- Normal randomizer")
+    print("e5- Exit")
+    print("")
+
+    while True:
+
+        selection = input("Enter a choice: ")
+
+        if(selection == "e1"):
+            primary_mode()
+            break
+        elif(selection == "e2"):
+            military_mode()
+            break
+        elif(selection == "e3"):
+            magic_mode()
+            break
+        elif(selection == "e4"):
+            monkeys_3()
+            break
+        elif(selection == "e5"):
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Enter 'e1'-'e5'")
+            print("")
+
 
 mainMenu()
